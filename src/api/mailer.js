@@ -18,10 +18,10 @@ export const sendMailApi = async ({email, subject, body}) => {
   log.info('API::Mailer::sendMailApi', {email, subject, body});
 
   const response = await transporter.sendMail({
-    from: process.env.MAILER_USER, // sender address
-    to: email, // list of receivers
-    subject, // Subject line
-    text: body, // plain text body
+    from: process.env.MAILER_USER,
+    to: email,
+    subject,
+    text: body,
   });
 
   return response;
