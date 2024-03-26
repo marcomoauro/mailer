@@ -24,7 +24,7 @@ yarn install
 yarn serve:development
 ```
 
-Send test email:
+Send test email with:
 ```sh
 curl --location 'localhost/send-mail' \
 --header 'Content-Type: application/json' \
