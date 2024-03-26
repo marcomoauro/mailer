@@ -1,6 +1,10 @@
-# Node backend template
+# Mailer
 
-Backend template for Node.js.
+Mailer implementation in Node.js.
+
+## References
+I talk about this project in this episode of my tech newsletter:
+https://implementing.substack.com/p/how-to-create-mailer-nodejs-using-gmail-account
 
 ## Requirements
 
@@ -14,12 +18,19 @@ yarn install
 
 ## How to use
 
-- Create the .env file based on the env-template, the only env to configure is DATABASE_URL.
+- Create the .env file based on the env-template.
 - Starts the server by executing:
 ```sh
 yarn serve:development
 ```
 
-## References
-I talk about this project in this episode of my tech newsletter:
-https://implementing.substack.com/p/my-backend-template-for-nodejs
+Send test email:
+```sh
+curl --location 'localhost/send-mail' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "email": "marcomoauro@hotmail.it",
+  "subject": "Test Subject from Node.js Mailer",
+  "body": "Example body for Implementing post"
+}'
+```
