@@ -8,7 +8,8 @@
   },
   "scripts": {
     "serve:development": "nodemon --env-file=.env src/index.js",
-    "serve:production": "node src/index.js"
+    "serve:production": "node src/index.js",
+    "send-test-email": "sh scripts/send-mail.sh"
   },
   "repository": {
     "type": "git",
