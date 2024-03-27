@@ -1,4 +1,4 @@
-curl --location 'localhost/send-mail' \
+curl --location 'http://localhost/send-mail' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "email": "marcomoauro@hotmail.it",
